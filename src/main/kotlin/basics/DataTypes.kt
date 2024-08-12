@@ -30,10 +30,9 @@ fun printBirthdayGreeting(name: String, age: Int): String {
 }
 
 // default arguments
+// escaping characters works the same way as in js
 fun goodMorningGreeting(name: String = "Housel", age: Int = 78): String {
     val greeting = "Happy birthday $name"
     val ageMention = "You are now $age year old"
     return "$greeting\n$ageMention"
 }
-
-// escaping characters works the same way as in js
