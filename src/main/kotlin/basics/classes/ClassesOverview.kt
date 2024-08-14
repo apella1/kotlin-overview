@@ -109,6 +109,7 @@ class Rectangle : Polygon() {
 // non-abstract open members can be overridden by an open one
 
 open class Shape() {
+    open val vertexCount: Int = 0
     open fun draw() {}
 }
 
