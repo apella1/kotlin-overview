@@ -28,10 +28,21 @@ fun main() {
     })
 
     // param types in lambdas are optional if they can be inferred
-    val joinedToString = items.fold("Elements: ", { acc, i -> acc + " " + i })
+    val joinedToString = items.fold("Elements: ") { acc, i -> "$acc $i" }
 
     // function references can be used for higher order function calls
     val product = items.fold(1, Int::times)
     println(joinedToString)
     println(product)
 }
+
+// function types
+// e.g (Int) -> String
+// specifying nullable function type ((Int, Int) -> Int)?
+
+// combining function types using parenthesis
+// i.e (Int) -> ((Int) -> Unit)
+// the -> is right associative
+// (Int) -> (Int) -> Unit is equivalent to ((Int) -> (Int)) -> Unit
+// function types can be named
+typealias clickHandler = (Button: String, ClickEvent: String) -> Unit
