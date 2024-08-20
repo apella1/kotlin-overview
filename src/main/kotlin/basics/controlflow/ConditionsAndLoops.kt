@@ -1,7 +1,7 @@
 package basics.controlflow
 
 // if expression
-// if returns a value i.e there is  no ternary operator (condition ? then : else)
+// if returns a value i.e. there is  no ternary operator (condition ? then : else)
 // else if, else - similar to most languages
 fun main() {
     forLoops()
@@ -32,7 +32,7 @@ fun ifExpression() {
 // e.g enum class entries and sealed class subtypes
 
 fun whenExpression(x: Int) {
-    val validNumbers = listOf(1, 2, 3, 3)
+    val validNumbers = listOf(1, 2, 3, 4)
     when (x) {
         1 -> println("x == 1")
         2 -> println("x == 2")
