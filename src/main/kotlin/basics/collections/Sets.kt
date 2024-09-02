@@ -8,6 +8,7 @@ fun main() {
     println(favouriteMarvelVillains)
     println(favMarvelCharacters)
     if (favMarvelCharacters.contains("captain marvel")) println("Captain Marvel made the list")
+    println("Dark Seid" in favouriteMarvelVillains)
 }
 
 // the default implementation of MutableSet, LinkedHashSet, preserves the order of insertion
