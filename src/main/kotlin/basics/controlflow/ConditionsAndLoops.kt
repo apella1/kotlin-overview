@@ -4,7 +4,7 @@ package basics.controlflow
 // if returns a value i.e. there is  no ternary operator (condition ? then : else)
 // else if, else - similar to most languages
 fun main() {
-    forLoops()
+    println(hasPrefix("hello").toString())
 }
 
 
