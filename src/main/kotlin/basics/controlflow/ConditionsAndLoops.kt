@@ -5,6 +5,7 @@ package basics.controlflow
 // else if, else - similar to most languages
 fun main() {
     println(hasPrefix("hello").toString())
+    forLoops()
 }
 
 
@@ -28,7 +29,7 @@ fun ifExpression() {
 
 // when expression
 // if when is used as an expression, the else branch is mandatory,
-// unless the compiler can prove that all possible  cases are covered with branch conditions
+// unless the compiler can prove that all possible cases are covered with branch conditions
 // e.g enum class entries and sealed class subtypes
 
 fun whenExpression(x: Int) {
@@ -98,15 +99,24 @@ fun forLoops() {
         println(i)
     }
 
+    for (i in 1..30 step 5) {
+        println(i)
+    }
+
+    for (i in 60 downTo 6) {
+        println(i)
+    }
+
     // stepping up
     for (i in 10..40 step 10) {
         println(i)
     }
 
+
     // using withIndex library function
     val nums = intArrayOf(2, 4, 5)
     for ((index, value) in nums.withIndex()) {
-        println("then element at index $index is $value")
+        println("the element at index $index is $value")
     }
 }
 
