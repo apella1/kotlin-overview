@@ -37,6 +37,42 @@ fun lists() {
     println("Ada" in programmingLanguages)
 }
 
+enum class Type {
+    TEACHER, STUDENT
+}
+
+data class Dep(
+    val name: String,
+    val category: Type
+)
+
+fun grouping() {
+    val deps = mutableListOf(
+        Dep("Pete", Type.STUDENT),
+        Dep("Jade", Type.TEACHER),
+        Dep("Hansen", Type.STUDENT),
+        Dep("Otis", Type.STUDENT),
+        Dep("Mule", Type.STUDENT),
+        Dep("Mike", Type.STUDENT),
+        Dep("King", Type.TEACHER),
+    )
+
+    for (dep in deps) {
+        println(dep.name)
+    }
+
+    val sortedDeps = deps.sortedBy {
+        when (it.category) {
+            Type.TEACHER -> 0
+            Type.STUDENT -> 1
+        }
+    }
+
+    for (dep in sortedDeps) {
+        println(dep.toString())
+    }
+}
+
 fun main() {
-    lists()
+    grouping()
 }
